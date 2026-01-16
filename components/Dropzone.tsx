@@ -1,6 +1,7 @@
+'use client';
 
 import React, { useState, useRef, useCallback } from 'react';
-import { Upload, Shield } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 interface DropzoneProps {
   onFileSelect: (file: File) => void;

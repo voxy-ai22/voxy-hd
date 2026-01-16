@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useCallback } from 'react';
 import { Sparkles, Link as LinkIcon, Loader2, AlertCircle, ChevronDown, CheckCircle2, Clipboard, Image as ImageIcon } from 'lucide-react';
 import { Dropzone } from './Dropzone';

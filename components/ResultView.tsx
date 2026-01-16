@@ -1,3 +1,4 @@
+'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Download, RefreshCw, CheckCircle2, Share2, Sparkles, Image as ImageIcon, Eye } from 'lucide-react';
@@ -17,10 +18,8 @@ export const ResultView: React.FC<ResultViewProps> = ({ originalUrl, hdUrl, onRe
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Run scan animation once on mount
     const timer = setTimeout(() => setShowScan(false), 3000);
     
-    // Animate slider on entrance
     let frame = 0;
     let animationId: number;
 
@@ -56,7 +55,6 @@ export const ResultView: React.FC<ResultViewProps> = ({ originalUrl, hdUrl, onRe
   };
 
   const handleDownload = () => {
-    // Data URLs can be used directly for download
     const link = document.createElement('a');
     link.href = hdUrl;
     link.download = `voxy-hd-enhanced-${Date.now()}.png`;
@@ -74,7 +72,7 @@ export const ResultView: React.FC<ResultViewProps> = ({ originalUrl, hdUrl, onRe
           </div>
           <div>
             <h2 className="text-xl font-bold text-white leading-none flex items-center gap-2">
-              Voxy Ai Hd Enhanced
+              Voxy AI HD Enhanced
             </h2>
             <p className="text-slate-400 text-sm mt-1">AI has finished upscaling your image.</p>
           </div>
